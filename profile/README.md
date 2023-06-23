@@ -1,3 +1,3 @@
 # Summertime Project
 
-[Helpful knowledge](/links.md)
+[Helpful knowledge](profile/links.md)
