@@ -24,9 +24,29 @@ To ensure fast and robust communication Main MCU will buffer all incoming data a
 
 
 ## Data Stored and Processed
+**Accesible by master**, _Planned_
 
-#### Mainframe
-..* idk
+#### Arm MCU
+
+* Arm servo position
+* Clamp servo position
+* **Arm cartesian position**
+* _Arm cartesian orientation_
+* **Clamp state**
+
+#### Chasis MCU
+
+* Motors velocity (open loop)
+* _Motor position_
+
+
+#### by Mainframe
+
+* Arm cartesian position 
+* _Arm Orientation_
+* _Chasis position_
+* Obstacle information
+* Arm clamp state
 
 # TODO
 
