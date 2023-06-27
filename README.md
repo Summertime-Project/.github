@@ -23,7 +23,7 @@ In future versions maybe we will implement some handshake protocol to make confi
 # Conclusions
 
 To conclude:
-    1. Communication needs to be bidirectional
-    2. To ease impementation there will be ladder of master hierarchy: Mainframe -> Main MCU -> Module MCU
-    3. Main MCU will be managing all trafic and all possible low level protocol transitions
-    4. All communication will be proceeded using ONE encapsulation and command set.
+1. Communication needs to be bidirectional
+2. To ease impementation there will be ladder of master hierarchy: Mainframe -> Main MCU -> Module MCU
+3. Main MCU will be managing all trafic and all possible low level protocol transitions
+4. All communication will be proceeded using ONE encapsulation and command set.
