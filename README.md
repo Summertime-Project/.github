@@ -24,9 +24,9 @@ To ensure fast and robust communication Main MCU will buffer all incoming data a
 
 
 ## Data Stored and Processed
-**Accesible by master**, _Planned_
+**Accesible by master**, _Planned_. All shown below informations inside systems are desired an actual if open close loop controll is used.  
 
-#### Arm MCU
+#### by Arm MCU
 
 * Arm servo position
 * Clamp servo position
@@ -34,19 +34,27 @@ To ensure fast and robust communication Main MCU will buffer all incoming data a
 * _Arm cartesian orientation_
 * **Clamp state**
 
-#### Chasis MCU
+#### by Chasis MCU
 
 * Motors velocity (open loop)
 * _Motor position_
+* _Chassis cartesian position_
+* _Chassis cartesian angle_
+* **Chassis relative velocity**
+* **Chassis relative angular velocity**
 
+#### by Obstacles Sensor MCU
 
-#### by Mainframe
+* **Obstacles cartesian position**
+* Sensors proximity signals
 
-* Arm cartesian position 
-* _Arm Orientation_
-* _Chasis position_
-* Obstacle information
-* Arm clamp state
+#### by Main MCU
+
+* **Arm cartesian position**
+* **Clamp state**
+* **Chassis relative velocity**
+* **Chassis relative angular velocity**
+* **Obstacles cartesian position**
 
 # TODO
 
