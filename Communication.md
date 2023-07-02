@@ -33,7 +33,7 @@ To ensure fast and robust communication Main MCU will buffer all incoming data a
 * _Arm cartesian orientation_
 * **Clamp state**
 
-#### by Chasis MCU
+#### by Chassis MCU
 
 * Motors' velocity (open loop)
 * _Motors' position_
