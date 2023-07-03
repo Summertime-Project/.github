@@ -20,7 +20,7 @@ This dictates that Mainframe-MCU communication needs to transport as high level 
 
 To ensure fast and robust communication Main MCU will buffer all incoming data and if there won't be update, retransfer it as required.
 
-
+Master sends Desired State from Nodes to execute or master Requests Actual State from Nodes fro master to acquire and procces it.
 
 ## Data Stored and Processed
 **Accesible by master**, _Planned_. All shown below informations inside systems are desired an actual if open close loop controll is used.  
