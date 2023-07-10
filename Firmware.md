@@ -7,12 +7,37 @@
 
 Network side of communication was shown here: [Communication.md](/Communication.md)
 
+## System Architecture
+
+For all modules' software to be expandable we need specific approach to system design.
+Funcionalities that all of modules need to have:
+
+- Read and write dataframes to Bus
+- Steering peripherals
+- Reading peripherals
+- _Error throwing and handling_
+
+For forseable future all software will be run in totaly deterministic blocking superloop, where tasks will be executed:
+
+- Read dataframe from Bus, validate and decode, update desired state struct
+
+- Read from peripherals, update internal state, calculate and update accesible (by master) state using internal state
+
+- Construct dataframe, write it to bus
+
+- Calculate internal state using state structs, update peripherals
+
+
+_Errors should be thrown on bus when master requests any info from module_
+
+All modules should have switchable debug logging thru USB.
+
 ## Internal Data Structures and Data handling
 
-..* Input buffer
-..* Output buffer
-..* Real state struct
-..* Desired state struct (If closed loop only, else = Real)
+- Input buffer
+- Output buffer
+- Real state struct
+- Desired state struct (If closed loop only, else = Real)
 
 ## State struct
 
