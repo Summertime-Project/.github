@@ -11,12 +11,12 @@ Big encapluation task is to provide direct and errorless Body transfer between n
 
 |bit |Short |Desc |
 |--- |---- |---- |
-|0| RFU||
+|0| REQUEST?????| requests data from module|
 |1| RFU||
 |2| RFU||
 |3| RFU||
-|4| RFU||
-|5| MNR0| 3bit number of module, may be somewhat redundant|
+|4| ERR????| Module error information|
+|5| MNR0| 3bit number of module|
 |6| MNR1||
 |7| MNR2||
 
@@ -50,7 +50,7 @@ One byte CRC wil be derrived from LEN and BODY
 |Num |Name |Desc |Simillar Type |
 |--- |---- |---- |---- |
 |0| REQUEST| requests data from slave, in Value should be requested tag| UINT16|
-|1| RFU|||
+|1| RFU| | |
 |2| CO1| Primary Open/Closed| BOOL(DER???     FF=True, 00=False, else error?)|
 
 #### Constructed
