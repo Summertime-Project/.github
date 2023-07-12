@@ -10,27 +10,27 @@ Network side of communication was shown here: [Communication.md](/Communication.
 ## System Architecture
 
 For all modules' software to be expandable we need specific approach to system design.
-Funcionalities that all of modules need to have:
+Funcionalities that all modules are in need of:
 
-- Read and write dataframes to Bus
+- Reading and writing dataframes to Bus
 - Steering peripherals
 - Reading peripherals
 - _Error throwing and handling_
 
-For forseable future all software will be run in totaly deterministic blocking superloop, where tasks will be executed:
+For foreseeable future all software will be run in a totally deterministic blocking superloop, where the following tasks will be executed:
 
 - Read dataframe from Bus, validate and decode, update desired state struct
 
-- Read from peripherals, update internal state, calculate and update accesible (by master) state using internal state
+- Read from peripherals, update internal state, calculate and update accessible (by master) state using internal state
 
 - Construct dataframe, write it to bus
 
 - Calculate internal state using state structs, update peripherals
 
 
-_Errors should be thrown on bus when master requests any info from module_
+_Errors should be thrown on bus when master requests any info from module_.
 
-All modules should have switchable debug logging thru USB.
+All modules should have switchable debug logging through USB.
 
 ## Internal Data Structures and Data handling
 
@@ -49,23 +49,23 @@ It can store:
 - Angular velocity
 - Position
 - Angle
-- Bolean Values (eg. Clamp state)
+- Boolean Values (eg. Clamp state)
 
-2. Secondary Values just like primary values (Porbably will not be used)
+2. Secondary Values, just like primary values (Porbably will not be used)
 
 3. Internal Values:
 
-- eg. servo angle
-- eg. motor speed
+- servo angle
+- motor speed
+- etc.
 
 ## Communication Handling
 
 ### Incoming packets
 
-Incoming packet (if posible should be filtered by lower level hardware communication protocol's handlers), should be transfered byte by byte to specialized buffer (From now known as inBuffer) of size **TODO** 256/512. 
-CRC of packet should be checked first.
-inBuffer should be checked if packet's module number matches MCU module nr. 
+Incoming packet (if posible should be filtered by lower level hardware communication protocol's handlers), should be transfered byte by byte to specialized buffer (inBuffer) of size **TODO** 256/512. 
+CRC of packet should be checked first. Then, the recipient module number included in the packet should be compared to the actual module's nubmer.
 
 ### Request Handling
 
-If TLV is Request MCU should construct and send Actual data packet 
+When TLV is Request, MCU should construct and send a data packet containing an actual state variable.
