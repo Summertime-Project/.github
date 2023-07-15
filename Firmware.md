@@ -43,15 +43,13 @@ All modules should have switchable debug logging through USB.
 
 State struct storage is dependendent on Module.
 It can store:
-1. Primary Values accesed by Master:
+1. Values accesed by Master:
 
 - Velocity
 - Angular velocity
 - Position
 - Angle
 - Boolean Values (eg. Clamp state)
-
-2. Secondary Values, just like primary values (Porbably will not be used)
 
 3. Internal Values:
 
