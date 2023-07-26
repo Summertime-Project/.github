@@ -53,13 +53,13 @@ One byte CRC wil be derrived from LEN and BODY
 #### Constructed
 |Num |Name |Desc | Containing|
 |--- |---- |---- | ----------|
-|00| ALL| All available data transfered inside this tag !!!Dificult!!!| device specific|
-|01| CHV| Chassis's Velocity|         3xINT32/FLOAT|
-|02| CHW| Chassis's Angular velocity| 3xINT32/FLOAT|
-|03| ARP| Arm's Position|         3xINT32/FLOAT|
-|04| ARA| _Arm's Angle_|            3xINT32/FLOAT|
-|05| PRS| Singular obstacle position| 3xINT32/FLOAT|
-|06| PRM| Multiple obstacles positions| NxPRS|
+|0x00| ALL| All available data transfered inside this tag !!!Dificult!!!| device specific|
+|0x01| CHV| Chassis's Velocity|         3xINT32/FLOAT|
+|0x02| CHW| Chassis's Angular velocity| 3xINT32/FLOAT|
+|0x03| ARP| Arm's Position|         3xINT32/FLOAT|
+|0x04| ARA| _Arm's Angle_|            3xINT32/FLOAT|
+|0x05| PRS| Singular obstacle position| 3xINT32/FLOAT|
+|0x10| PRM| Multiple obstacles positions| NxPRS|
 
 ## Examples
 
